@@ -22,13 +22,24 @@ Noble_list = ['He', 'Ne', 'Ar', 'Kr', 'Xe', 'Rn','null']
 
 ### TODO
 i = 0
-while i < 8:
-    print("len of input is: ", len(listOfInputs))
-    for x in range(len(Alkali_list)):
+x = 0
+# while i < 8:
+#     print("len of input is: ", len(listOfInputs))
+#     for x in range(len(Alkali_list)):
+#         if listOfInputs[i] == Alkali_list[x]:
+#             check = 1
+#             print(Alkali_list[x])
+#         elif listOfInputs[i] == AlkalineEarth_list[x]:
+#             check = 1
+#             print(AlkalineEarth_list[x])
+#     i += 1
+
+for element in Alkali_list:
+    for elem in listOfInputs:
         if listOfInputs[i] == Alkali_list[x]:
-            check = 1
             print(Alkali_list[x])
-        elif listOfInputs[i] == AlkalineEarth_list[x]:
-            check = 1
-            print(AlkalineEarth_list[x])
-    i += 1
+            break
+        else:
+            print("Element Not Found!")
+        i += 1
+    break
