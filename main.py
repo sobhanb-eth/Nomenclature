@@ -39,7 +39,26 @@ for element in Alkali_list:
         if listOfInputs[i] == Alkali_list[x]:
             print(Alkali_list[x])
             break
-        else:
-            print("Element Not Found!")
+            elif listOfInputs[i] == AlkalineEarth_list[x]:
+            print(AlkalineEarth_list[x])
+            break
+        elif listOfInputs[i] == Icosagens_list[x]:
+            print(Icosagens_list[x])
+            break
+        elif listOfInputs[i] == Crystal_list[x]:
+            print(Crystal_list[x])
+            break
+        elif listOfInputs[i] == Pnicto_list[x]:
+            print(Pnicto_list[x])
+            break
+        elif listOfInputs[i] == Chalco_list[x]:
+            print(Chalco_list[x])
+            break
+        elif listOfInputs[i] == Halo_list[x]:
+            print(Halo_list[x])
+            break
+        elif listOfInputs[i] == Noble_list[x]:
+            print(Noble_list[x])
+            break
         i += 1
     break
