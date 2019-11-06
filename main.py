@@ -1,4 +1,5 @@
 # Counter wtf do I need to explain
+is_Found = 0
 counter = int(input("How many Compounds in Formula: "))
 s_counter = counter
 # list for storage of inputs
@@ -34,31 +35,42 @@ x = 0
 #             print(AlkalineEarth_list[x])
 #     i += 1
 
-for element in Alkali_list:
-    for elem in listOfInputs:
+for element_alk in Alkali_list:
+    for elem_in_alk in listOfInputs:
         if listOfInputs[i] == Alkali_list[x]:
-            print(Alkali_list[x])
+            is_Found = 1
+            print("Element ", Alkali_list[x], " is in Alkali Group.")
             break
-            elif listOfInputs[i] == AlkalineEarth_list[x]:
-            print(AlkalineEarth_list[x])
-            break
-        elif listOfInputs[i] == Icosagens_list[x]:
-            print(Icosagens_list[x])
-            break
-        elif listOfInputs[i] == Crystal_list[x]:
-            print(Crystal_list[x])
-            break
-        elif listOfInputs[i] == Pnicto_list[x]:
-            print(Pnicto_list[x])
-            break
-        elif listOfInputs[i] == Chalco_list[x]:
-            print(Chalco_list[x])
-            break
-        elif listOfInputs[i] == Halo_list[x]:
-            print(Halo_list[x])
-            break
-        elif listOfInputs[i] == Noble_list[x]:
-            print(Noble_list[x])
+        elif is_Found == 0:
+            for element_Alk_ert in AlkalineEarth_list:
+                for elem_in_ert in listOfInputs:
+                    if listOfInputs[i] == AlkalineEarth_list[x]:
+                        is_Found = 1
+                        print("Element ", AlkalineEarth_list[x], " is in Alkaline Earth Group")
+                        break
+                break
             break
         i += 1
     break
+
+# elif listOfInputs[i] == AlkalineEarth_list[x]:
+#     print(AlkalineEarth_list[x])
+#     break
+# elif listOfInputs[i] == Icosagens_list[x]:
+#     print(Icosagens_list[x])
+#     break
+# elif listOfInputs[i] == Crystal_list[x]:
+#     print(Crystal_list[x])
+#     break
+# elif listOfInputs[i] == Pnicto_list[x]:
+#     print(Pnicto_list[x])
+#     break
+# elif listOfInputs[i] == Chalco_list[x]:
+#     print(Chalco_list[x])
+#     break
+# elif listOfInputs[i] == Halo_list[x]:
+#     print(Halo_list[x])
+#     break
+# elif listOfInputs[i] == Noble_list[x]:
+#     print(Noble_list[x])
+#     break
