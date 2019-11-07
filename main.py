@@ -1,15 +1,27 @@
-# Counter wtf do I need to explain
-counter = int(input("How many Compounds in Formula: "))
-s_counter = counter
-# list for storage of inputs
-listOfInputs = []
-# iterative loop for inputs
-while counter > 0:
-    f_element = input("Enter Element: ")
-    listOfInputs.append(f_element)
-    f_element_num = int(input("Enter Element's Coefficient Num: "))
-    listOfInputs.append(f_element_num)
-    counter = counter - 1
+counter = int(input("Number of the elements of compound: "))
+ctrl = 1
+element_List = []
+coefficient_List = []
+
+while ctrl <= counter:
+
+    if ctrl == 1 or counter == 21:
+        element_input = input("Enter the SYMBOL of the " + str(ctrl) + "st element: ")
+        coefficient_no = input("Enter the Number of the " + str(ctrl) + "st element: ")
+    elif ctrl == 2 or ctrl == 22 or ctrl == 32:
+        element_input = input("Enter the SYMBOL of the " + str(ctrl) + "nd element: ")
+        coefficient_no = input("Enter the NUMBER of the " + str(ctrl) + "nd element: ")
+    elif ctrl == 3 or ctrl == 23 or ctrl == 33:
+        element_input = input("Enter the SYMBOL of the " + str(ctrl) + "rd element: ")
+        coefficient_no = input("Enter the NUMBER of the " + str(ctrl) + "rd element: ")
+    else:
+        element_input = input("Enter the SYMBOL of the " + str(ctrl) + "th element: ")
+        coefficient_no = input("Enter the NUMBER of the " + str(ctrl) + "th element: ")
+    element_List.append(element_input)
+    coefficient_List.append(coefficient_no)
+
+    ctrl = ctrl + 1
+print(element_List)
 # list for elements
 Alkali_list = ['H', 'Li', 'Na', 'K', 'Rb', 'Cs', 'Fr']
 AlkalineEarth_list = ['Be', 'Mg', 'Ca', 'Sr', 'Ba', 'Ra', 'None']
@@ -21,49 +33,36 @@ Halo_list = ['F', 'Cl', 'Br', 'I', 'At', 'Null', 'Null']
 Noble_list = ['He', 'Ne', 'Ar', 'Kr', 'Xe', 'Rn', 'null']
 
 ### TODO: Input Analysis
+input_ctrlf = counter
 i = 0
-j = i+2
 x = 0
-y = 0
-# while is_Found == 0:
-for element_list in Alkali_list, AlkalineEarth_list, Icosagens_list, Crystal_list, Pnicto_list, Crystal_list, Halo_list, Noble_list:
-    for elem_input in listOfInputs:
-        if listOfInputs[i] == Alkali_list[x]:
-            if listOfInputs[j] == Alkali_list[y]:
-                print("Element ", Alkali_list[y], " and" " is in Alkali Group.")
-            print("Element ", Alkali_list[x], " and" " is in Alkali Group.")
-        elif listOfInputs[i] == AlkalineEarth_list[x]:
-            if listOfInputs[j] == AlkalineEarth_list[y]:
-                print("Element ", AlkalineEarth_list[y], " is in Alkaline Earth Group.")
-            print("Element ", AlkalineEarth_list[x], " is in Alkaline Earth Group.")
-        elif listOfInputs[i] == Icosagens_list[x]:
-            if listOfInputs[j] == Icosagens_list[y]:
-                print("Element ", Icosagens_list[y], " is in Icosagens Group.")
-            print("Element ", Icosagens_list[x], " is in Icosagens Group.")
-        elif listOfInputs[i] == Crystal_list[x]:
-            if listOfInputs[j] == Crystal_list[y]:
-                print("Element ", Crystal_list[y], " is in Crystals Group.")
-            print("Element ", Crystal_list[x], " is in Crystals Group.")
-        elif listOfInputs[i] == Pnicto_list[x]:
-            if listOfInputs[j] == Pnicto_list[y]:
-                print("Element ", Pnicto_list[y], " is in Pnicto Group.")
-            print("Element ", Pnicto_list[x], " is in Pnicto Group.")
-        elif listOfInputs[i] == Chalco_list[x]:
-            if listOfInputs[j] == Chalco_list[y]:
-                print("Element ", Chalco_list[y], " is in Chalco Group.")
-            print("Element ", Chalco_list[x], " is in Chalco Group.")
-        elif listOfInputs[i] == Halo_list[x]:
-            if listOfInputs[j] == Halo_list[y]:
-                print("Element ", Halo_list[y], " is in Halogens Group.")
-            print("Element ", Halo_list[x], " is in Halogens Group.")
-        elif listOfInputs[i] == Noble_list[x]:
-            if listOfInputs[j] == Noble_list[y]:
-                print("Element ", Noble_list[y], " is in Noble Gases Group.")
-            print("Element ", Noble_list[x], " is in Noble Gases Group.")
-        else:
-            print("heyvaaan Yanlis Yaptin bole bisey Yok")
-            break
-        i += 1
-        j += 1
+while i < input_ctrlf:
+    for element_list in Alkali_list, AlkalineEarth_list, Icosagens_list, Crystal_list, Pnicto_list, Crystal_list, Halo_list, Noble_list:
+        for elem_input in element_List:
+            print("------% Inner Loop %------", i)
+            if element_List[i] == Alkali_list[x]:
+                print("Element ", Alkali_list[x], " and" " is in Alkali Group.")
+            elif element_List[i] == AlkalineEarth_list[x]:
+                print("Element ", AlkalineEarth_list[x], " is in Alkaline Earth Group.")
+            elif element_List[i] == Icosagens_list[x]:
+                print("Element ", Icosagens_list[x], " is in Icosagens Group.")
+            elif element_List[i] == Crystal_list[x]:
+                print("Element ", Crystal_list[x], " is in Crystals Group.")
+            elif element_List[i] == Pnicto_list[x]:
+                print("Element ", Pnicto_list[x], " is in Pnicto Group.")
+            elif element_List[i] == Chalco_list[x]:
+                print("Element ", Chalco_list[x], " is in Chalco Group.")
+            elif element_List[i] == Halo_list[x]:
+                print("Element ", Halo_list[x], " is in Halogens Group.")
+            elif element_List[i] == Noble_list[x]:
+                print("Element ", Noble_list[x], " is in Noble Gases Group.")
+            else:
+                print("PATLADIK ANNAAAAM!")
+                print(i)
+                print(element_List[i])
+                print(x)
+                print(Alkali_list[x], AlkalineEarth_list[x], Icosagens_list[x], Crystal_list[x], Pnicto_list[x], Chalco_list[x], Halo_list[x], Noble_list[x])
+                break
         break
-    break
+    i += 1
+    x += 1
