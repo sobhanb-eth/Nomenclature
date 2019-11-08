@@ -33,7 +33,7 @@ Halo_list = ['F', 'Cl', 'Br', 'I', 'At', 'Null', 'Null']
 Noble_list = ['He', 'Ne', 'Ar', 'Kr', 'Xe', 'Rn', 'null']
 Metals = ['Li', 'Na', 'K', 'Rb', 'Cs', 'Fr', 'Be', 'Mg', 'Ca', 'Sr', 'Ba', 'Ra', 'Al', 'Ga', 'In', 'Tl', 'Sn', 'Pb',
           'Bi', 'Po']
-Non_Metals = ['C', 'N', 'P', 'O', 'S', 'Se', 'F', 'Cl', 'Br', 'I', 'At', 'He', 'Ne', 'Ar', 'Kr', 'Xe', 'Rn']
+Non_Metals = ['H', 'C', 'N', 'P', 'O', 'S', 'Se', 'F', 'Cl', 'Br', 'I', 'At', 'He', 'Ne', 'Ar', 'Kr', 'Xe', 'Rn']
 Metalloids = ['B', 'Si', 'Ge', 'As', 'Sb', 'Te', 'Po']
 
 ### TODO: Input Analysis: 1) First Phase of detecting Input's group type => DONE!
@@ -41,18 +41,24 @@ Metalloids = ['B', 'Si', 'Ge', 'As', 'Sb', 'Te', 'Po']
 ### TODO: Input Analysis: 3) 3rd Phase Bond Type Detection
 input_ctrlf = counter
 i = 0
+metal = 0
+nonmetal = 0
+metaloid = 0
 while i < input_ctrlf:
     if element_List[i] in Alkali_list:
         print("Element '", element_List[i], "' is in Alkali Group.", end='')
         if element_List[i] in Metals:
             print(" And It is Metal")
+            metal = 1
         elif element_List[i] in Non_Metals:
             print(" And It is Non-Metal")
+            nonmetal = 1
         else:
             print("And It is Metalloid")
     elif element_List[i] in AlkalineEarth_list:
         print("Element '", element_List[i], "' is in Alkaline Earth Group.", end='')
         if element_List[i] in Metals:
+            metal = 1
             print(" And It is Metal")
         else:
             print(" And It is Non-Metal")
@@ -105,6 +111,14 @@ while i < input_ctrlf:
         else:
             print("And It is Metalloid")
     i += 1
+print(element_List)
+print(metaloid, nonmetal, metal)
+if metal == 1 and nonmetal == 1:
+    print('Ionic Bond')
+elif metal == 0 and nonmetal == 1 and metaloid == 0:
+    print('Covalent bond')
+elif metal == 1 and metaloid == 0 and nonmetal ==0:
+    print('Metallic Bonding')
 
 ### TODO: Bond Type Detection
 ### TODO: Check the Number of Coeficients of each Element => if it is GREATER than "1" and it is Covelant then proceed to add Mono - di - tri etc.
