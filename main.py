@@ -31,29 +31,79 @@ Pnicto_list = ['N', 'P', 'As', 'Sb', 'Bi', 'Null', 'Null']
 Chalco_list = ['O', 'S', 'Se', 'Te', 'Po', 'Null', 'Null']
 Halo_list = ['F', 'Cl', 'Br', 'I', 'At', 'Null', 'Null']
 Noble_list = ['He', 'Ne', 'Ar', 'Kr', 'Xe', 'Rn', 'null']
+Metals = ['Li', 'Na', 'K', 'Rb', 'Cs', 'Fr', 'Be', 'Mg', 'Ca', 'Sr', 'Ba', 'Ra', 'Al', 'Ga', 'In', 'Tl', 'Sn', 'Pb',
+          'Bi', 'Po']
+Non_Metals = ['C', 'N', 'P', 'O', 'S', 'Se', 'F', 'Cl', 'Br', 'I', 'At', 'He', 'Ne', 'Ar', 'Kr', 'Xe', 'Rn']
+Metalloids = ['B', 'Si', 'Ge', 'As', 'Sb', 'Te', 'Po']
 
 ### TODO: Input Analysis: 1) First Phase of detecting Input's group type => DONE!
-### TODO: Input Analysis: 2) Second Phase Element Type : Metal - NonMetal - Ion
+### TODO: Input Analysis: 2) Second Phase Element Type : Metal - NonMetal - Ion => DONE!
 ### TODO: Input Analysis: 3) 3rd Phase Bond Type Detection
 input_ctrlf = counter
 i = 0
 while i < input_ctrlf:
     if element_List[i] in Alkali_list:
-        print("Element '", element_List[i], "' is in Alkali Group.")
+        print("Element '", element_List[i], "' is in Alkali Group.", end='')
+        if element_List[i] in Metals:
+            print(" And It is Metal")
+        elif element_List[i] in Non_Metals:
+            print(" And It is Non-Metal")
+        else:
+            print("And It is Metalloid")
     elif element_List[i] in AlkalineEarth_list:
-        print("Element '", element_List[i], "' is in Alkaline Earth Group.")
+        print("Element '", element_List[i], "' is in Alkaline Earth Group.", end='')
+        if element_List[i] in Metals:
+            print(" And It is Metal")
+        else:
+            print(" And It is Non-Metal")
     elif element_List[i] in Icosagens_list:
-        print("Element '", element_List[i], "' is in Icosagens Group.")
+        print("Element '", element_List[i], "' is in Icosagens Group.", end='')
+        if element_List[i] in Metals:
+            print(" And It is Metal")
+        elif element_List[i] in Non_Metals:
+            print(" And It is Non-Metal")
+        else:
+            print("And It is Metalloid")
     elif element_List[i] in Crystal_list:
-        print("Element '", element_List[i], "' is in Crystals Group.")
+        print("Element '", element_List[i], "' is in Crystals Group.", end='')
+        if element_List[i] in Metals:
+            print(" And It is Metal")
+        elif element_List[i] in Non_Metals:
+            print(" And It is Non-Metal")
+        else:
+            print("And It is Metalloid")
     elif element_List[i] in Pnicto_list:
-        print("Element ''", element_List[i], "' is in Pnicto Group.")
+        print("Element ''", element_List[i], "' is in Pnicto Group.", end='')
+        if element_List[i] in Metals:
+            print(" And It is Metal")
+        elif element_List[i] in Non_Metals:
+            print(" And It is Non-Metal")
+        else:
+            print("And It is Metalloid")
     elif element_List[i] in Chalco_list:
-        print("Element ''", element_List[i], "' is in Chacos Group.")
+        print("Element ''", element_List[i], "' is in Chacos Group.", end='')
+        if element_List[i] in Metals:
+            print(" And It is Metal")
+        elif element_List[i] in Non_Metals:
+            print(" And It is Non-Metal")
+        else:
+            print("And It is Metalloid")
     elif element_List[i] in Halo_list:
-        print("Element '", element_List[i], "'  is in Halogens Group.")
+        print("Element '", element_List[i], "'  is in Halogens Group.", end='')
+        if element_List[i] in Metals:
+            print(" And It is Metal")
+        elif element_List[i] in Non_Metals:
+            print(" And It is Non-Metal")
+        else:
+            print("And It is Metalloid")
     elif element_List[i] in Noble_list:
-        print("Element ''", element_List[i], "' is in Nobel Gases Group.")
+        print("Element ''", element_List[i], "' is in Nobel Gases Group.", end='')
+        if element_List[i] in Metals:
+            print(" And It is Metal")
+        elif element_List[i] in Non_Metals:
+            print(" And It is Non-Metal")
+        else:
+            print("And It is Metalloid")
     i += 1
 
 ### TODO: Bond Type Detection
