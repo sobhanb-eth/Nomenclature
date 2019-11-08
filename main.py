@@ -47,13 +47,13 @@ n_Noble_list = ['Helium', 'Neon', 'Argon', 'Krypton', 'Xenon', 'Radon', 'null']
 ### TODO: Input Analysis: 1) First Phase of detecting Input's group type => DONE!
 ### TODO: Input Analysis: 2) Second Phase Element Type : Metal - NonMetal - Ion => DONE!
 ### TODO: Input Analysis: 3) 3rd Phase Bond Type Detection => DONE!
-input_ctrlf = counter
+n_input_ctrlf = counter
 i = 0
 metal = 0
 nonmetal = 0
 metalloid = 0
 result_list = []
-while i < input_ctrlf:
+while i < n_input_ctrlf:
     if element_List[i] in Alkali_list:
         print("Element '", element_List[i], "' is in Alkali Group.", end='')
         if element_List[i] in Metals:
@@ -140,12 +140,45 @@ while i < input_ctrlf:
     i += 1
 print(result_list)
 ### TODO: Bond Type Detection -> DONE!
+covelant = 0
+ionic = 0
+metalic = 0
 if metal == 1 and nonmetal == 1:
     print('Ionic Bond')
+    ionic = 1
 elif metal == 0 and nonmetal == 1 and metalloid == 0:
     print('Covalent bond')
+    covelant = 1
 elif metal == 1 and metalloid == 0 and nonmetal == 0:
     print('Metallic Bonding')
+    metalic = 1
+print(covelant, ionic, metalic)
+
+def roman_number_switcher(argument):
+    switcher = {
+        1: "mono ",
+        2: "di ",
+        3: "tri ",
+        4: "tetra ",
+        5: "penta ",
+        6: "hex ",
+        7: "hept ",
+        8: "oct ",
+        9: "non ",
+        10: "dec ",
+    }
+    print(switcher.get(argument, "Invalid month"))
+
+c_input_ctrlf = counter
+if covelant == 1:
+    if coefficient_List[0] == 1:
+        pass
+    elif coefficient_List[0] == 2:
+        print(roman_number_switcher(2), result_list[0])
+    elif coefficient_List[0] == 3:
+        print(roman_number_switcher(3), result_list[0])
+    elif coefficient_List[0] == 4:
+        print(roman_number_switcher(4), result_list[0])
 
 ### TODO: Check the Number of Coeficients of each Element => if it is GREATER than "1" and it is Covelant then proceed to add Mono - di - tri etc.
 ### TODO: Define fixed case: Carbide, Nitride, Oxide, Fluoride, Phosphide, Sulfide, Chloride, Selenide, Bromide, Telluride, Iodide,
