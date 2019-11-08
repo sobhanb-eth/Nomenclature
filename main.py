@@ -7,16 +7,16 @@ while ctrl <= counter:
 
     if ctrl == 1 or counter == 21:
         element_input = input("Enter the SYMBOL of the " + str(ctrl) + "st element: ")
-        coefficient_no = input("Enter the Number of the " + str(ctrl) + "st element: ")
+        coefficient_no = input("Enter the COEFFICIENT Number of the " + str(ctrl) + "st element: ")
     elif ctrl == 2 or ctrl == 22 or ctrl == 32:
         element_input = input("Enter the SYMBOL of the " + str(ctrl) + "nd element: ")
-        coefficient_no = input("Enter the NUMBER of the " + str(ctrl) + "nd element: ")
+        coefficient_no = input("Enter the COEFFICIENT NUMBER of the " + str(ctrl) + "nd element: ")
     elif ctrl == 3 or ctrl == 23 or ctrl == 33:
         element_input = input("Enter the SYMBOL of the " + str(ctrl) + "rd element: ")
-        coefficient_no = input("Enter the NUMBER of the " + str(ctrl) + "rd element: ")
+        coefficient_no = input("Enter the COEFFICIENT NUMBER of the " + str(ctrl) + "rd element: ")
     else:
         element_input = input("Enter the SYMBOL of the " + str(ctrl) + "th element: ")
-        coefficient_no = input("Enter the NUMBER of the " + str(ctrl) + "th element: ")
+        coefficient_no = input("Enter the COEFFICIENT NUMBER of the " + str(ctrl) + "th element: ")
     element_List.append(element_input)
     coefficient_List.append(coefficient_no)
 
@@ -131,6 +131,7 @@ while i < input_ctrlf:
     result_list.append(element_List[i])
     i += 1
 print(result_list)
+### TODO: Bond Type Detection -> DONE!
 if metal == 1 and nonmetal == 1:
     print('Ionic Bond')
 elif metal == 0 and nonmetal == 1 and metalloid == 0:
@@ -138,7 +139,6 @@ elif metal == 0 and nonmetal == 1 and metalloid == 0:
 elif metal == 1 and metalloid == 0 and nonmetal == 0:
     print('Metallic Bonding')
 
-### TODO: Bond Type Detection
 ### TODO: Check the Number of Coeficients of each Element => if it is GREATER than "1" and it is Covelant then proceed to add Mono - di - tri etc.
 ### TODO: Define fixed case: Carbide, Nitride, Oxide, Fluoride, Phosphide, Sulfide, Chloride, Selenide, Bromide, Telluride, Iodide,
 ### TODO: Special Case of OH (Hydroxides)
