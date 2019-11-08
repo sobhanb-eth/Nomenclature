@@ -39,21 +39,21 @@ input_ctrlf = counter
 i = 0
 while i < input_ctrlf:
     if element_List[i] in Alkali_list:
-        print("Element ", element_List[i], " and" " is in Alkali Group.")
+        print("Element '", element_List[i], "' is in Alkali Group.")
     elif element_List[i] in AlkalineEarth_list:
-        print("Element ", element_List[i], " and" " is in Alkaline Earth Group.")
+        print("Element '", element_List[i], "' is in Alkaline Earth Group.")
     elif element_List[i] in Icosagens_list:
-        print("Element ", element_List[i], " and" " is in Icosagens Group.")
+        print("Element '", element_List[i], "' is in Icosagens Group.")
     elif element_List[i] in Crystal_list:
-        print("Element ", element_List[i], " and" " is in Crystals Group.")
+        print("Element '", element_List[i], "' is in Crystals Group.")
     elif element_List[i] in Pnicto_list:
-        print("Element ", element_List[i], " and" " is in Pnicto Group.")
+        print("Element ''", element_List[i], "' is in Pnicto Group.")
     elif element_List[i] in Chalco_list:
-        print("Element ", element_List[i], " and" " is in Chacos Group.")
+        print("Element ''", element_List[i], "' is in Chacos Group.")
     elif element_List[i] in Halo_list:
-        print("Element ", element_List[i], " and" " is in Halogens Group.")
+        print("Element '", element_List[i], "'  is in Halogens Group.")
     elif element_List[i] in Noble_list:
-        print("Element ", element_List[i], " and" " is in Nobel Gases Group.")
+        print("Element ''", element_List[i], "' is in Nobel Gases Group.")
     i += 1
 
 ### TODO: Bond Type Detection
