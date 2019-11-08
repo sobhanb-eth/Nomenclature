@@ -38,12 +38,13 @@ Metalloids = ['B', 'Si', 'Ge', 'As', 'Sb', 'Te', 'Po']
 
 ### TODO: Input Analysis: 1) First Phase of detecting Input's group type => DONE!
 ### TODO: Input Analysis: 2) Second Phase Element Type : Metal - NonMetal - Ion => DONE!
-### TODO: Input Analysis: 3) 3rd Phase Bond Type Detection
+### TODO: Input Analysis: 3) 3rd Phase Bond Type Detection => DONE!
 input_ctrlf = counter
 i = 0
 metal = 0
 nonmetal = 0
-metaloid = 0
+metalloid = 0
+result_list = []
 while i < input_ctrlf:
     if element_List[i] in Alkali_list:
         print("Element '", element_List[i], "' is in Alkali Group.", end='')
@@ -55,6 +56,7 @@ while i < input_ctrlf:
             nonmetal = 1
         else:
             print("And It is Metalloid")
+            metalloid = 1
     elif element_List[i] in AlkalineEarth_list:
         print("Element '", element_List[i], "' is in Alkaline Earth Group.", end='')
         if element_List[i] in Metals:
@@ -62,62 +64,78 @@ while i < input_ctrlf:
             print(" And It is Metal")
         else:
             print(" And It is Non-Metal")
+            nonmetal = 1
     elif element_List[i] in Icosagens_list:
         print("Element '", element_List[i], "' is in Icosagens Group.", end='')
         if element_List[i] in Metals:
             print(" And It is Metal")
+            metal = 1
         elif element_List[i] in Non_Metals:
             print(" And It is Non-Metal")
+            nonmetal = 1
         else:
             print("And It is Metalloid")
+            metalloid = 1
     elif element_List[i] in Crystal_list:
         print("Element '", element_List[i], "' is in Crystals Group.", end='')
         if element_List[i] in Metals:
             print(" And It is Metal")
+            metal = 1
         elif element_List[i] in Non_Metals:
             print(" And It is Non-Metal")
+            nonmetal = 1
         else:
             print("And It is Metalloid")
+            metalloid = 1
     elif element_List[i] in Pnicto_list:
         print("Element ''", element_List[i], "' is in Pnicto Group.", end='')
         if element_List[i] in Metals:
             print(" And It is Metal")
+            metal = 1
         elif element_List[i] in Non_Metals:
             print(" And It is Non-Metal")
+            nonmetal = 1
         else:
             print("And It is Metalloid")
+            metalloid = 1
     elif element_List[i] in Chalco_list:
         print("Element ''", element_List[i], "' is in Chacos Group.", end='')
         if element_List[i] in Metals:
             print(" And It is Metal")
+            metal = 1
         elif element_List[i] in Non_Metals:
             print(" And It is Non-Metal")
+            nonmetal = 1
         else:
             print("And It is Metalloid")
+            metalloid = 1
     elif element_List[i] in Halo_list:
         print("Element '", element_List[i], "'  is in Halogens Group.", end='')
         if element_List[i] in Metals:
             print(" And It is Metal")
+            metal = 1
         elif element_List[i] in Non_Metals:
             print(" And It is Non-Metal")
+            nonmetal = 1
         else:
             print("And It is Metalloid")
+            metalloid = 1
     elif element_List[i] in Noble_list:
         print("Element ''", element_List[i], "' is in Nobel Gases Group.", end='')
         if element_List[i] in Metals:
             print(" And It is Metal")
+            metal = 1
         elif element_List[i] in Non_Metals:
             print(" And It is Non-Metal")
-        else:
-            print("And It is Metalloid")
+            nonmetal = 1
+    result_list.append(element_List[i])
     i += 1
-print(element_List)
-print(metaloid, nonmetal, metal)
+print(result_list)
 if metal == 1 and nonmetal == 1:
     print('Ionic Bond')
-elif metal == 0 and nonmetal == 1 and metaloid == 0:
+elif metal == 0 and nonmetal == 1 and metalloid == 0:
     print('Covalent bond')
-elif metal == 1 and metaloid == 0 and nonmetal ==0:
+elif metal == 1 and metalloid == 0 and nonmetal == 0:
     print('Metallic Bonding')
 
 ### TODO: Bond Type Detection
