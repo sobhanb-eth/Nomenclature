@@ -35,7 +35,15 @@ Metals = ['Li', 'Na', 'K', 'Rb', 'Cs', 'Fr', 'Be', 'Mg', 'Ca', 'Sr', 'Ba', 'Ra',
           'Bi', 'Po']
 Non_Metals = ['H', 'C', 'N', 'P', 'O', 'S', 'Se', 'F', 'Cl', 'Br', 'I', 'At', 'He', 'Ne', 'Ar', 'Kr', 'Xe', 'Rn']
 Metalloids = ['B', 'Si', 'Ge', 'As', 'Sb', 'Te', 'Po']
-
+### TODO: Naming The Elements
+n_Alkali_list = ['Hydrogen', 'Lithium', 'Sodium', 'Potassium', 'Rubidium', 'Cesium', 'Francium']
+n_AlkalineEarth_list = ['Beryllium', 'Magnesium', 'Calcium', 'Strontium', 'Barium', 'Radium', 'None']
+n_Icosagens_list = ['Boron', 'Aluminum', 'Gallium', 'Indium', 'Thallium', 'null', 'null']
+n_Crystal_list = ['Carbon', 'Silicon', 'Germanium', 'Tin', 'Lead', 'null', 'null']
+n_Pnicto_list = ['Nitrogen', 'Phosphorus', 'Arsenic', 'Antimony', 'Bismuth', 'null', 'null']
+n_Chalco_list = ['Oxygen', 'Sulfur', 'Selenium', 'Tellurium', 'Polonium', 'null', 'null']
+n_Halo_list = ['Fluorine', 'Chlorine', 'Bromine', 'Iodine', 'Astatine', 'null', 'null']
+n_Noble_list = ['Helium', 'Neon', 'Argon', 'Krypton', 'Xenon', 'Radon', 'null']
 ### TODO: Input Analysis: 1) First Phase of detecting Input's group type => DONE!
 ### TODO: Input Analysis: 2) Second Phase Element Type : Metal - NonMetal - Ion => DONE!
 ### TODO: Input Analysis: 3) 3rd Phase Bond Type Detection => DONE!
