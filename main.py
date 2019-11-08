@@ -21,7 +21,7 @@ while ctrl <= counter:
     coefficient_List.append(coefficient_no)
 
     ctrl = ctrl + 1
-print(element_List)
+# print(element_List)
 # list for elements
 Alkali_list = ['H', 'Li', 'Na', 'K', 'Rb', 'Cs', 'Fr']
 AlkalineEarth_list = ['Be', 'Mg', 'Ca', 'Sr', 'Ba', 'Ra', 'None']
@@ -32,37 +32,33 @@ Chalco_list = ['O', 'S', 'Se', 'Te', 'Po', 'Null', 'Null']
 Halo_list = ['F', 'Cl', 'Br', 'I', 'At', 'Null', 'Null']
 Noble_list = ['He', 'Ne', 'Ar', 'Kr', 'Xe', 'Rn', 'null']
 
-### TODO: Input Analysis
+### TODO: Input Analysis: 1) First Phase of detecting Input's group type => DONE!
+### TODO: Input Analysis: 2) Second Phase Element Type : Metal - NonMetal - Ion
+### TODO: Input Analysis: 3) 3rd Phase Bond Type Detection
 input_ctrlf = counter
 i = 0
-x = 0
 while i < input_ctrlf:
-    for element_list in Alkali_list, AlkalineEarth_list, Icosagens_list, Crystal_list, Pnicto_list, Crystal_list, Halo_list, Noble_list:
-        for elem_input in element_List:
-            print("------% Inner Loop %------", i)
-            if element_List[i] == Alkali_list[x]:
-                print("Element ", Alkali_list[x], " and" " is in Alkali Group.")
-            elif element_List[i] == AlkalineEarth_list[x]:
-                print("Element ", AlkalineEarth_list[x], " is in Alkaline Earth Group.")
-            elif element_List[i] == Icosagens_list[x]:
-                print("Element ", Icosagens_list[x], " is in Icosagens Group.")
-            elif element_List[i] == Crystal_list[x]:
-                print("Element ", Crystal_list[x], " is in Crystals Group.")
-            elif element_List[i] == Pnicto_list[x]:
-                print("Element ", Pnicto_list[x], " is in Pnicto Group.")
-            elif element_List[i] == Chalco_list[x]:
-                print("Element ", Chalco_list[x], " is in Chalco Group.")
-            elif element_List[i] == Halo_list[x]:
-                print("Element ", Halo_list[x], " is in Halogens Group.")
-            elif element_List[i] == Noble_list[x]:
-                print("Element ", Noble_list[x], " is in Noble Gases Group.")
-            else:
-                print("PATLADIK ANNAAAAM!")
-                print(i)
-                print(element_List[i])
-                print(x)
-                print(Alkali_list[x], AlkalineEarth_list[x], Icosagens_list[x], Crystal_list[x], Pnicto_list[x], Chalco_list[x], Halo_list[x], Noble_list[x])
-                break
-        break
+    if element_List[i] in Alkali_list:
+        print("Element ", element_List[i], " and" " is in Alkali Group.")
+    elif element_List[i] in AlkalineEarth_list:
+        print("Element ", element_List[i], " and" " is in Alkaline Earth Group.")
+    elif element_List[i] in Icosagens_list:
+        print("Element ", element_List[i], " and" " is in Icosagens Group.")
+    elif element_List[i] in Crystal_list:
+        print("Element ", element_List[i], " and" " is in Crystals Group.")
+    elif element_List[i] in Pnicto_list:
+        print("Element ", element_List[i], " and" " is in Pnicto Group.")
+    elif element_List[i] in Chalco_list:
+        print("Element ", element_List[i], " and" " is in Chacos Group.")
+    elif element_List[i] in Halo_list:
+        print("Element ", element_List[i], " and" " is in Halogens Group.")
+    elif element_List[i] in Noble_list:
+        print("Element ", element_List[i], " and" " is in Nobel Gases Group.")
     i += 1
-    x += 1
+
+### TODO: Bond Type Detection
+### TODO: Check the Number of Coeficients of each Element => if it is GREATER than "1" and it is Covelant then proceed to add Mono - di - tri etc.
+### TODO: Define fixed case: Carbide, Nitride, Oxide, Fluoride, Phosphide, Sulfide, Chloride, Selenide, Bromide, Telluride, Iodide,
+### TODO: Special Case of OH (Hydroxides)
+### TODO: Special Case for NH4 NH3 etc
+### TODO:
