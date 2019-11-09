@@ -218,7 +218,10 @@ x = 0
 if covelant == 1:
     while x < c_input_ctrlf:
         if coefficient_List[x] in numbers:
-            print(roman_number_switcher(int(coefficient_List[x])), naming_list[x], end=" ")
+            if int(coefficient_List[0]) == 1 and x == 0:
+                print(naming_list[x], end=" ")
+            else:
+                print(roman_number_switcher(int(coefficient_List[x])), naming_list[x], end=" ")
         x += 1
 
 # TODO: Define fixed case: Carbide, Nitride, Oxide, Fluoride, Phosphide, Sulfide, Chloride, Selenide, Bromide,
