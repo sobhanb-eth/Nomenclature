@@ -1,3 +1,5 @@
+from typing import List, Union
+
 counter = int(input("Number of the elements of compound: "))
 ctrl = 1
 element_List = []
@@ -142,7 +144,40 @@ while i < n_input_ctrlf:
     result_list.append(element_List[i])
     i += 1
 print(result_list)
+naming_list = []
+### TODO: Turn Symbols to names
+i = 0
+x = 0
+while i < len(result_list):
+    while x < 7:
+        if result_list[i] in Alkali_list[x]:
+            naming_list.append(n_Alkali_list[x])
+            break
+        elif result_list[i] in AlkalineEarth_list[x]:
+            naming_list.append(n_AlkalineEarth_list[x])
+            break
+        elif result_list[i] in Icosagens_list[x]:
+            naming_list.append(n_Icosagens_list[x])
+            break
+        elif result_list[i] in Crystal_list[x]:
+            naming_list.append(n_Crystal_list[x])
+            break
+        elif result_list[i] in Pnicto_list[x]:
+            naming_list.append(n_Pnicto_list[x])
+            break
+        elif result_list[i] in Chalco_list[x]:
+            naming_list.append(n_Chalco_list[x])
+            break
+        elif result_list[i] in Halo_list[x]:
+            naming_list.append(n_Halo_list[x])
+            break
+        elif result_list[i] in Noble_list[x]:
+            naming_list.append(n_Noble_list[x])
+            break
 
+        x += 1
+    i += 1
+print(naming_list)
 # TODO: Bond Type Detection -> DONE!
 
 covelant = 0
@@ -176,7 +211,6 @@ def roman_number_switcher(argument):
     return switcher.get(argument, "Invalid Number!")
 
 
-
 # TODO: Check the Number of Coeficients of each Element => if it is GREATER than "1" and it is Covelant then proceed
 #  to add Mono - di - tri etc.
 c_input_ctrlf = counter
@@ -184,7 +218,7 @@ x = 0
 if covelant == 1:
     while x < c_input_ctrlf:
         if coefficient_List[x] in numbers:
-            print(roman_number_switcher(int(coefficient_List[x])), result_list[x], end=" ")
+            print(roman_number_switcher(int(coefficient_List[x])), naming_list[x], end=" ")
         x += 1
 
 # TODO: Define fixed case: Carbide, Nitride, Oxide, Fluoride, Phosphide, Sulfide, Chloride, Selenide, Bromide,
