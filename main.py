@@ -21,8 +21,9 @@ while ctrl <= counter:
     coefficient_List.append(coefficient_no)
 
     ctrl = ctrl + 1
-# print(element_List)
+
 # list for elements
+
 Alkali_list = ['H', 'Li', 'Na', 'K', 'Rb', 'Cs', 'Fr']
 AlkalineEarth_list = ['Be', 'Mg', 'Ca', 'Sr', 'Ba', 'Ra', 'None']
 Icosagens_list = ['B', 'Al', 'Ga', 'In', 'Tl', 'None', 'None']
@@ -35,7 +36,7 @@ Metals = ['Li', 'Na', 'K', 'Rb', 'Cs', 'Fr', 'Be', 'Mg', 'Ca', 'Sr', 'Ba', 'Ra',
           'Bi', 'Po']
 Non_Metals = ['H', 'C', 'N', 'P', 'O', 'S', 'Se', 'F', 'Cl', 'Br', 'I', 'At', 'He', 'Ne', 'Ar', 'Kr', 'Xe', 'Rn']
 Metalloids = ['B', 'Si', 'Ge', 'As', 'Sb', 'Te', 'Po']
-### TODO: Naming The Elements
+# TODO: Naming The Elements
 n_Alkali_list = ['Hydrogen', 'Lithium', 'Sodium', 'Potassium', 'Rubidium', 'Cesium', 'Francium']
 n_AlkalineEarth_list = ['Beryllium', 'Magnesium', 'Calcium', 'Strontium', 'Barium', 'Radium', 'None']
 n_Icosagens_list = ['Boron', 'Aluminum', 'Gallium', 'Indium', 'Thallium', 'null', 'null']
@@ -44,9 +45,11 @@ n_Pnicto_list = ['Nitrogen', 'Phosphorus', 'Arsenic', 'Antimony', 'Bismuth', 'nu
 n_Chalco_list = ['Oxygen', 'Sulfur', 'Selenium', 'Tellurium', 'Polonium', 'null', 'null']
 n_Halo_list = ['Fluorine', 'Chlorine', 'Bromine', 'Iodine', 'Astatine', 'null', 'null']
 n_Noble_list = ['Helium', 'Neon', 'Argon', 'Krypton', 'Xenon', 'Radon', 'null']
-### TODO: Input Analysis: 1) First Phase of detecting Input's group type => DONE!
-### TODO: Input Analysis: 2) Second Phase Element Type : Metal - NonMetal - Ion => DONE!
-### TODO: Input Analysis: 3) 3rd Phase Bond Type Detection => DONE!
+numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+# TODO: Input Analysis: 1) First Phase of detecting Input's group type => DONE!
+# TODO: Input Analysis: 2) Second Phase Element Type : Metal - NonMetal - Ion => DONE!
+# TODO: Input Analysis: 3) 3rd Phase Bond Type Detection => DONE!
+
 n_input_ctrlf = counter
 i = 0
 metal = 0
@@ -139,7 +142,9 @@ while i < n_input_ctrlf:
     result_list.append(element_List[i])
     i += 1
 print(result_list)
-### TODO: Bond Type Detection -> DONE!
+
+# TODO: Bond Type Detection -> DONE!
+
 covelant = 0
 ionic = 0
 metalic = 0
@@ -154,34 +159,37 @@ elif metal == 1 and metalloid == 0 and nonmetal == 0:
     metalic = 1
 print(covelant, ionic, metalic)
 
+
 def roman_number_switcher(argument):
     switcher = {
-        1: "mono ",
-        2: "di ",
-        3: "tri ",
-        4: "tetra ",
-        5: "penta ",
-        6: "hex ",
-        7: "hept ",
-        8: "oct ",
-        9: "non ",
-        10: "dec ",
+        1: "mono",
+        2: "di",
+        3: "tri",
+        4: "tetra",
+        5: "penta",
+        6: "hex",
+        7: "hept",
+        8: "oct",
+        9: "non",
+        10: "dec",
     }
-    print(switcher.get(argument, "Invalid month"))
+    return switcher.get(argument, "Invalid Number!")
 
+
+
+# TODO: Check the Number of Coeficients of each Element => if it is GREATER than "1" and it is Covelant then proceed
+#  to add Mono - di - tri etc.
 c_input_ctrlf = counter
+x = 0
 if covelant == 1:
-    if coefficient_List[0] == 1:
-        pass
-    elif coefficient_List[0] == 2:
-        print(roman_number_switcher(2), result_list[0])
-    elif coefficient_List[0] == 3:
-        print(roman_number_switcher(3), result_list[0])
-    elif coefficient_List[0] == 4:
-        print(roman_number_switcher(4), result_list[0])
+    while x < c_input_ctrlf:
+        if coefficient_List[x] in numbers:
+            print(roman_number_switcher(int(coefficient_List[x])), result_list[x], end=" ")
+        x += 1
 
-### TODO: Check the Number of Coeficients of each Element => if it is GREATER than "1" and it is Covelant then proceed to add Mono - di - tri etc.
-### TODO: Define fixed case: Carbide, Nitride, Oxide, Fluoride, Phosphide, Sulfide, Chloride, Selenide, Bromide, Telluride, Iodide,
-### TODO: Special Case of OH (Hydroxides)
-### TODO: Special Case for NH4 NH3 etc
-### TODO:
+# TODO: Define fixed case: Carbide, Nitride, Oxide, Fluoride, Phosphide, Sulfide, Chloride, Selenide, Bromide,
+#  Telluride, Iodide, etc
+
+# TODO: Special Case of OH (Hydroxides)
+# TODO: Special Case for NH4 NH3 etc
+# TODO:
